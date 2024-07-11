@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --overpass: "overpass", sans-serif
+} 
+
+
+
+body {
+    width: 100%;
+    background-color:hsl(216, 12%, 8%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--overpass);
+}
+
+main{
+    width: 350px;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: hsla(213, 20%, 18%, 0.636); 
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.image img{
+    --size: 3rem;
+
+    width: var(--size);
+    height: var(--size);
+    background-color: rgba(128, 128, 128, 0.095);
+    padding: 16px;
+    border-radius: var(--size)
+}
+
+.content{
+    margin: 20px 0;
+}
+.content .How h1{
+  color: hsl(0, 0%, 100%);
+  font-family: var(--overpass);
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.content .How p{
+    color: hsl(217, 12%, 63%);
+    font-size: 14px;
+    font-family: var(--overpass);
+    line-height: 1.5;
+    margin: unset;
+}
+.btns ul{
+    display: flex;
+    gap: 8px;
+    /* justify-content: space-between; */
+    margin-bottom: 30px;
+}
+.btns ul li{
+    --size: 3rem;
+
+    width: var(--size);
+    height: var(--size);
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.095);
+    color: hsl(217, 12%, 63%);
+    padding: 16px;
+    border-radius: var(--size)
+} 
+
+.btns ul li:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+    font-weight: 700;
+    transition: 2s;
+    transform: matrix(2);
+}
+
+.btn-Submit button{
+    width: 100%;
+    height: 40px;
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-family: var(--overpass);
+    font-weight: 700;
+    font-size: 13px;
+} 
+.btn-Submit button:hover{
+    background-color: white;
+    color: hsl(216, 12%, 8%);
+    font-weight: 700;
+    transform: matrix(1)
+}
+
+@media  screen and (max-width: 375px) {
+    body {
+        padding: 15px;
+    }
+    .btns ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .btns ul li{
+        --size: 2rem;
+
+        width: var(--size);
+        height: var(--size);
+        padding: 8px;
+        border-radius: var(--size)
+    }
+    
+}
